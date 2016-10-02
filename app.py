@@ -124,7 +124,7 @@ def place_file(self, id, source_path):
         returncode = subprocess.call(gdal_translate, timeout=60*5)
     except subprocess.TimeoutExpired as e:
         raise Exception(json.dumps({
-            'name': 'overviews',
+            'name': 'proprocess',
             'started_at': started_at.isoformat(),
             'command': ' '.join(gdal_translate),
             'return_code': returncode,
